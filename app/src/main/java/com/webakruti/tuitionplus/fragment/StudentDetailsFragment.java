@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.webakruti.tuitionplus.R;
+import com.webakruti.tuitionplus.adapters.StudentCourseAdapter;
 import com.webakruti.tuitionplus.adapters.StudentDetailsAdapter;
 import com.webakruti.tuitionplus.models.Details;
 import com.webakruti.tuitionplus.models.Student;
@@ -54,6 +55,9 @@ public class StudentDetailsFragment extends Fragment {
     private RecyclerView recyclerView;
 
     //course details
+    private  RecyclerView recyclerViewCourseDetails;
+
+  /*  //course details
     private TextView textViewCourseName;
     private TextView textViewCourseDuration;
     private TextView textViewCourseDurationType;
@@ -80,10 +84,13 @@ public class StudentDetailsFragment extends Fragment {
     private TextView textView2ndTotalAmount;
     private TextView textView2ndPaidFees;
     private TextView textView2ndRemainingFee;
-    private TextView textView2ndPaidOnDate;
+    private TextView textView2ndPaidOnDate;*/
 
     View viewBatchDetailsTop;
+    View viewCourseDetails;
+
     TextView textViewBatchDetails;
+    TextView textViewCourseDetails;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -122,14 +129,21 @@ public class StudentDetailsFragment extends Fragment {
         buttonParentDetails = (Button) rootView.findViewById(R.id.buttonParentDetails);
 
         viewBatchDetailsTop = (View) rootView.findViewById(R.id.viewBatchDetailsTop);
+        viewCourseDetails = (View) rootView.findViewById(R.id.viewCourseDetails);
+
         textViewBatchDetails = (TextView) rootView.findViewById(R.id.textViewBatchDetails);
+        textViewCourseDetails = (TextView) rootView.findViewById(R.id.textViewCourseDetails);
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
+        recyclerViewCourseDetails = (RecyclerView) rootView.findViewById(R.id.recyclerView2);
+        LinearLayoutManager layoutManager2 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewCourseDetails.setLayoutManager(layoutManager2);
 
-        textViewCourseName = (TextView) rootView.findViewById(R.id.textViewCourseName);
+
+        /*textViewCourseName = (TextView) rootView.findViewById(R.id.textViewCourseName);
         textViewCourseDuration = (TextView) rootView.findViewById(R.id.textViewCourseDuration);
         textViewCourseDurationType = (TextView) rootView.findViewById(R.id.textViewCourseDurationType);
         textViewCourseFee = (TextView) rootView.findViewById(R.id.textViewCourseFee);
@@ -156,7 +170,7 @@ public class StudentDetailsFragment extends Fragment {
         textView2ndTotalAmount = (TextView) rootView.findViewById(R.id.textView2ndTotalAmount);
         textView2ndPaidFees = (TextView) rootView.findViewById(R.id.textView2ndPaidFees);
         textView2ndRemainingFee = (TextView) rootView.findViewById(R.id.textView2ndRemainingFee);
-        textView2ndPaidOnDate = (TextView) rootView.findViewById(R.id.textView2ndPaidOnDate);
+        textView2ndPaidOnDate = (TextView) rootView.findViewById(R.id.textView2ndPaidOnDate);*/
 
     }
 
@@ -212,7 +226,7 @@ public class StudentDetailsFragment extends Fragment {
         textViewStudentAddress.setText(details.getStudent().getAddress() + ", " + details.getStudent().getCity() + ", " +
                 details.getStudent().getState() + ", " + details.getStudent().getCountry() + ", " + details.getStudent().getPincode());
 
-        textViewCourseName.setText(details.getStudent().getStudentcourses().get(0).getCourse().getCourseName());
+       /* textViewCourseName.setText(details.getStudent().getStudentcourses().get(0).getCourse().getCourseName());
         textViewCourseDuration.setText(details.getStudent().getStudentcourses().get(0).getCourse().getDuration());
         textViewCourseDurationType.setText(details.getStudent().getStudentcourses().get(0).getCourse().getDurationType());
         textViewCourseFee.setText(details.getStudent().getStudentcourses().get(0).getCourse().getCoursefee());
@@ -238,7 +252,7 @@ public class StudentDetailsFragment extends Fragment {
         textView2ndTotalAmount.setText(details.getStudent().getStudentcourses().get(0).getStudentcoursesfeemng().get(2).getAmount());
         textView2ndPaidFees.setText(details.getStudent().getStudentcourses().get(0).getStudentcoursesfeemng().get(2).getPaidAmt());
         textView2ndRemainingFee.setText(details.getStudent().getStudentcourses().get(0).getStudentcoursesfeemng().get(2).getRemainingAmt());
-//        textView2ndPaidOnDate.setText(details.getStudent().getStudentcourses().get(0).getStudentcoursesfeemng().get(2).getPaidDate().toString());
+//        textView2ndPaidOnDate.setText(details.getStudent().getStudentcourses().get(0).getStudentcoursesfeemng().get(2).getPaidDate().toString());*/
 
 
         if (details.getStudent().getStudentbatches() != null && details.getStudent().getStudentbatches().size() > 0)
@@ -249,15 +263,35 @@ public class StudentDetailsFragment extends Fragment {
             // recyclerview setadapter
 
             // pass list of StudentBatches
-            //recyclerView.setAdapter(new StudentDetailsAdapter(getActivity(), details.getStudent().getStudentbatches()));
+            recyclerView.setAdapter(new StudentDetailsAdapter(getActivity(), details.getStudent().getStudentbatches()));
 
-            recyclerView.setAdapter(new StudentDetailsAdapter(getActivity(), 6));
+            //recyclerView.setAdapter(new StudentDetailsAdapter(getActivity(), 6));
 
         } else {
             textViewBatchDetails.setVisibility(View.GONE);
             viewBatchDetailsTop.setVisibility(View.GONE);
             recyclerView.setVisibility(View.GONE);
         }
+
+
+        if (details.getStudent().getStudentcourses() != null && details.getStudent().getStudentcourses().size() > 0)
+        {
+            textViewCourseDetails.setVisibility(View.VISIBLE);
+            viewCourseDetails.setVisibility(View.VISIBLE);
+            recyclerViewCourseDetails.setVisibility(View.VISIBLE);
+            // recyclerview setadapter
+
+            // pass list of StudentBatches
+            recyclerViewCourseDetails.setAdapter(new StudentCourseAdapter(getActivity(), details.getStudent().getStudentcourses()));
+
+            //recyclerView.setAdapter(new StudentDetailsAdapter(getActivity(), 6));
+
+        } else {
+            textViewCourseDetails.setVisibility(View.GONE);
+            viewCourseDetails.setVisibility(View.GONE);
+            recyclerViewCourseDetails.setVisibility(View.GONE);
+        }
+
 
         buttonParentDetails.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -295,18 +329,9 @@ public class StudentDetailsFragment extends Fragment {
             // https://upload.wikimedia.org/wikipedia/commons/1/14/Deepika_Padukone_December_2015.jpg
             String url = null;
             if (student.getImgurl() != null) {
-                url = (String) student.getImgurl();
+                url = student.getImgurl();
             } else {
-                if(student.getGender() == "female")
-                {
-                    StudentDetailsActivity.imageViewProfile.setImageResource(R.drawable.defaultmaleimg);
-                    // url = "https://upload.wikimedia.org/wikipedia/commons/1/14/Deepika_Padukone_December_2015.jpg";
-                }
-                else
-                {
-                    StudentDetailsActivity.imageViewProfile.setImageResource(R.drawable.defaultmaleimg);
-                }
-                //url = "https://upload.wikimedia.org/wikipedia/commons/1/14/Deepika_Padukone_December_2015.jpg";
+                url = "https://upload.wikimedia.org/wikipedia/commons/1/14/Deepika_Padukone_December_2015.jpg";
             }
             Picasso.with(getActivity())
                     .load(url)

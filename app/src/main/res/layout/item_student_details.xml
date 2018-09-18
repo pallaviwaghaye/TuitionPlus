@@ -25,7 +25,7 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="15dp"
                 android:orientation="horizontal"
                 android:weightSum="100">
 
@@ -54,18 +54,53 @@
                             android:layout_marginTop="5dp"
                             android:orientation="horizontal">
 
+
                             <ImageView
                                 android:id="@+id/imageViewTime"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@mipmap/ic_launcher" />
+                                android:src="@drawable/clock" />
+
+                            <TextView
+                                android:id="@+id/textViewBatchTimeText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="BatchTime :" />
 
                             <TextView
                                 android:id="@+id/textViewBatchTime"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
-                                android:text="8:00 PM Batch" />
+                                android:text="8:00" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutCourseTeacher"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textViewCourseTeacher"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="abcdcs"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="TeacherName"
+                                android:textColor="@color/grey"
+                                android:textSize="15dp" />
 
                         </LinearLayout>
 
@@ -83,9 +118,9 @@
 
                     <ImageView
                         android:id="@+id/imageViewBatchCourseImage"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:src="@mipmap/ic_launcher" />
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/webdesign" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -93,7 +128,9 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
                 android:orientation="horizontal"
                 android:weightSum="100">
 
@@ -106,22 +143,40 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/textViewBatchCourseDuration"
+                        <LinearLayout
+                            android:id="@+id/linearLayoutBatchCourseDuration"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="90 Days"
-                            android:textColor="@color/black"
-                            android:textSize="16sp" />
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textViewBatchCourseDuration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/textViewBatchDurationType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=" days"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+                        </LinearLayout>
 
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Duration"
-                            android:textColor="@color/black"
+                            android:textColor="@color/grey"
                             android:textSize="12sp" />
 
                     </LinearLayout>
@@ -151,7 +206,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Start date"
-                            android:textColor="@color/black"
+                            android:textColor="@color/grey"
                             android:textSize="12sp" />
 
                     </LinearLayout>
@@ -182,7 +237,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="End date"
-                            android:textColor="@color/black"
+                            android:textColor="@color/grey"
                             android:textSize="12sp" />
 
                     </LinearLayout>

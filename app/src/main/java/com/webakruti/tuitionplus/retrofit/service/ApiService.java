@@ -1,8 +1,5 @@
 package com.webakruti.tuitionplus.retrofit.service;
 
-
-
-
 import com.webakruti.tuitionplus.models.Details;
 import com.webakruti.tuitionplus.models.Login;
 import com.webakruti.tuitionplus.models.Workspace;

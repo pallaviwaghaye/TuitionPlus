@@ -1154,6 +1154,439 @@ public class Student {
 
     }
 
+    public class Batch {
+
+        @SerializedName("id")
+        @Expose
+        private Integer id;
+        @SerializedName("batchtype")
+        @Expose
+        private String batchtype;
+        @SerializedName("course_id")
+        @Expose
+        private String courseId;
+        @SerializedName("company_id")
+        @Expose
+        private String companyId;
+        @SerializedName("start_date")
+        @Expose
+        private String startDate;
+        @SerializedName("end_date")
+        @Expose
+        private String endDate;
+        @SerializedName("start_time")
+        @Expose
+        private String startTime;
+        @SerializedName("end_time")
+        @Expose
+        private String endTime;
+        @SerializedName("deleted")
+        @Expose
+        private String deleted;
+        @SerializedName("created_at")
+        @Expose
+        private Object createdAt;
+        @SerializedName("updated_at")
+        @Expose
+        private Object updatedAt;
+        @SerializedName("course")
+        @Expose
+        private Course_ course;
+
+        public Integer getId() {
+            return id;
+        }
+
+        public void setId(Integer id) {
+            this.id = id;
+        }
+
+        public String getBatchtype() {
+            return batchtype;
+        }
+
+        public void setBatchtype(String batchtype) {
+            this.batchtype = batchtype;
+        }
+
+        public String getCourseId() {
+            return courseId;
+        }
+
+        public void setCourseId(String courseId) {
+            this.courseId = courseId;
+        }
+
+        public String getCompanyId() {
+            return companyId;
+        }
+
+        public void setCompanyId(String companyId) {
+            this.companyId = companyId;
+        }
+
+        public String getStartDate() {
+            return startDate;
+        }
+
+        public void setStartDate(String startDate) {
+            this.startDate = startDate;
+        }
+
+        public String getEndDate() {
+            return endDate;
+        }
+
+        public void setEndDate(String endDate) {
+            this.endDate = endDate;
+        }
+
+        public String getStartTime() {
+            return startTime;
+        }
+
+        public void setStartTime(String startTime) {
+            this.startTime = startTime;
+        }
+
+        public String getEndTime() {
+            return endTime;
+        }
+
+        public void setEndTime(String endTime) {
+            this.endTime = endTime;
+        }
+
+        public String getDeleted() {
+            return deleted;
+        }
+
+        public void setDeleted(String deleted) {
+            this.deleted = deleted;
+        }
+
+        public Object getCreatedAt() {
+            return createdAt;
+        }
+
+        public void setCreatedAt(Object createdAt) {
+            this.createdAt = createdAt;
+        }
+
+        public Object getUpdatedAt() {
+            return updatedAt;
+        }
+
+        public void setUpdatedAt(Object updatedAt) {
+            this.updatedAt = updatedAt;
+        }
+
+        public Course_ getCourse() {
+            return course;
+        }
+
+        public void setCourse(Course_ course) {
+            this.course = course;
+        }
+
+    }
+
+    public class Studentbatch {
+
+        @SerializedName("id")
+        @Expose
+        private Integer id;
+        @SerializedName("company_id")
+        @Expose
+        private String companyId;
+        @SerializedName("student_id")
+        @Expose
+        private String studentId;
+        @SerializedName("course_id")
+        @Expose
+        private String courseId;
+        @SerializedName("batch_id")
+        @Expose
+        private String batchId;
+        @SerializedName("who_assinged")
+        @Expose
+        private String whoAssinged;
+        @SerializedName("created_at")
+        @Expose
+        private Object createdAt;
+        @SerializedName("updated_at")
+        @Expose
+        private Object updatedAt;
+        @SerializedName("batch")
+        @Expose
+        private Batch batch;
+
+        public Integer getId() {
+            return id;
+        }
+
+        public void setId(Integer id) {
+            this.id = id;
+        }
+
+        public String getCompanyId() {
+            return companyId;
+        }
+
+        public void setCompanyId(String companyId) {
+            this.companyId = companyId;
+        }
+
+        public String getStudentId() {
+            return studentId;
+        }
+
+        public void setStudentId(String studentId) {
+            this.studentId = studentId;
+        }
+
+        public String getCourseId() {
+            return courseId;
+        }
+
+        public void setCourseId(String courseId) {
+            this.courseId = courseId;
+        }
+
+        public String getBatchId() {
+            return batchId;
+        }
+
+        public void setBatchId(String batchId) {
+            this.batchId = batchId;
+        }
+
+        public String getWhoAssinged() {
+            return whoAssinged;
+        }
+
+        public void setWhoAssinged(String whoAssinged) {
+            this.whoAssinged = whoAssinged;
+        }
+
+        public Object getCreatedAt() {
+            return createdAt;
+        }
+
+        public void setCreatedAt(Object createdAt) {
+            this.createdAt = createdAt;
+        }
+
+        public Object getUpdatedAt() {
+            return updatedAt;
+        }
+
+        public void setUpdatedAt(Object updatedAt) {
+            this.updatedAt = updatedAt;
+        }
+
+        public Batch getBatch() {
+            return batch;
+        }
+
+        public void setBatch(Batch batch) {
+            this.batch = batch;
+        }
+
+    }
+
+    public class Course_ {
+
+        @SerializedName("id")
+        @Expose
+        private Integer id;
+        @SerializedName("course_name")
+        @Expose
+        private String courseName;
+        @SerializedName("company_id")
+        @Expose
+        private String companyId;
+        @SerializedName("description")
+        @Expose
+        private Object description;
+        @SerializedName("duration")
+        @Expose
+        private String duration;
+        @SerializedName("duration_type")
+        @Expose
+        private String durationType;
+        @SerializedName("teacher")
+        @Expose
+        private Object teacher;
+        @SerializedName("coursefee")
+        @Expose
+        private String coursefee;
+        @SerializedName("tax")
+        @Expose
+        private String tax;
+        @SerializedName("discount")
+        @Expose
+        private String discount;
+        @SerializedName("discountpara")
+        @Expose
+        private String discountpara;
+        @SerializedName("discountamt")
+        @Expose
+        private String discountamt;
+        @SerializedName("totalfee")
+        @Expose
+        private String totalfee;
+        @SerializedName("imgurl")
+        @Expose
+        private Object imgurl;
+        @SerializedName("deleted")
+        @Expose
+        private String deleted;
+        @SerializedName("created_at")
+        @Expose
+        private String createdAt;
+        @SerializedName("updated_at")
+        @Expose
+        private String updatedAt;
+
+        public Integer getId() {
+            return id;
+        }
+
+        public void setId(Integer id) {
+            this.id = id;
+        }
+
+        public String getCourseName() {
+            return courseName;
+        }
+
+        public void setCourseName(String courseName) {
+            this.courseName = courseName;
+        }
+
+        public String getCompanyId() {
+            return companyId;
+        }
+
+        public void setCompanyId(String companyId) {
+            this.companyId = companyId;
+        }
+
+        public Object getDescription() {
+            return description;
+        }
+
+        public void setDescription(Object description) {
+            this.description = description;
+        }
+
+        public String getDuration() {
+            return duration;
+        }
+
+        public void setDuration(String duration) {
+            this.duration = duration;
+        }
+
+        public String getDurationType() {
+            return durationType;
+        }
+
+        public void setDurationType(String durationType) {
+            this.durationType = durationType;
+        }
+
+        public Object getTeacher() {
+            return teacher;
+        }
+
+        public void setTeacher(Object teacher) {
+            this.teacher = teacher;
+        }
+
+        public String getCoursefee() {
+            return coursefee;
+        }
+
+        public void setCoursefee(String coursefee) {
+            this.coursefee = coursefee;
+        }
+
+        public String getTax() {
+            return tax;
+        }
+
+        public void setTax(String tax) {
+            this.tax = tax;
+        }
+
+        public String getDiscount() {
+            return discount;
+        }
+
+        public void setDiscount(String discount) {
+            this.discount = discount;
+        }
+
+        public String getDiscountpara() {
+            return discountpara;
+        }
+
+        public void setDiscountpara(String discountpara) {
+            this.discountpara = discountpara;
+        }
+
+        public String getDiscountamt() {
+            return discountamt;
+        }
+
+        public void setDiscountamt(String discountamt) {
+            this.discountamt = discountamt;
+        }
+
+        public String getTotalfee() {
+            return totalfee;
+        }
+
+        public void setTotalfee(String totalfee) {
+            this.totalfee = totalfee;
+        }
+
+        public Object getImgurl() {
+            return imgurl;
+        }
+
+        public void setImgurl(Object imgurl) {
+            this.imgurl = imgurl;
+        }
+
+        public String getDeleted() {
+            return deleted;
+        }
+
+        public void setDeleted(String deleted) {
+            this.deleted = deleted;
+        }
+
+        public String getCreatedAt() {
+            return createdAt;
+        }
+
+        public void setCreatedAt(String createdAt) {
+            this.createdAt = createdAt;
+        }
+
+        public String getUpdatedAt() {
+            return updatedAt;
+        }
+
+        public void setUpdatedAt(String updatedAt) {
+            this.updatedAt = updatedAt;
+        }
+
+    }
+
 
     @SerializedName("id")
     @Expose
@@ -1199,7 +1632,7 @@ public class Student {
     private String email;
     @SerializedName("imgurl")
     @Expose
-    private Object imgurl;
+    private String imgurl;
     @SerializedName("address")
     @Expose
     private String address;
@@ -1234,7 +1667,8 @@ public class Student {
     @SerializedName("studentcourses")
     private List<Studentcourse> studentcourses = null;
     @SerializedName("studentbatches")
-    private List<Object> studentbatches = null;
+    private List<Studentbatch> studentbatches = null;
+
 
     public Integer getId() {
         return id;
@@ -1348,11 +1782,11 @@ public class Student {
         this.email = email;
     }
 
-    public Object getImgurl() {
+    public String getImgurl() {
         return imgurl;
     }
 
-    public void setImgurl(Object imgurl) {
+    public void setImgurl(String imgurl) {
         this.imgurl = imgurl;
     }
 
@@ -1448,17 +1882,16 @@ public class Student {
         return studentcourses;
     }
 
-    public void setStudentcourses(List<Studentcourse> studentcourses) {
-        this.studentcourses = studentcourses;
-    }
-
-    public List<Object> getStudentbatches() {
+    public List<Studentbatch> getStudentbatches() {
         return studentbatches;
     }
 
-    public void setStudentbatches(List<Object> studentbatches) {
+    public void setStudentbatches(List<Studentbatch> studentbatches) {
         this.studentbatches = studentbatches;
     }
+
+
+
 
 
 }

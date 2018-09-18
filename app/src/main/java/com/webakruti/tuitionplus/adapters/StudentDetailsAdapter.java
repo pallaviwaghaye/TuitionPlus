@@ -10,53 +10,67 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.webakruti.tuitionplus.R;
+import com.webakruti.tuitionplus.models.Student;
 
 import java.util.List;
 
 public class StudentDetailsAdapter extends RecyclerView.Adapter<StudentDetailsAdapter.ViewHolder> {
 
     private Context context;
+    List<Student.Studentbatch> list;
 
-    int size;
-    public StudentDetailsAdapter(Context context, int size) {
+    public StudentDetailsAdapter(Context context, List<Student.Studentbatch> list) {
         this.context = context;
-        this.size = size;
+        this.list = list;
+
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_student_details, parent, false);
-        return new ViewHolder(view);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_student_details, viewGroup, false);
+        StudentDetailsAdapter.ViewHolder viewHolder = new StudentDetailsAdapter.ViewHolder(view);
+        return viewHolder;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int position) {
 
-        //holder.textViewBatchCourseName.setText(details.get(position).getCourseName());
+        final Student.Studentbatch studentbatch = list.get(position);
 
+        viewHolder.textViewBatchCourseName.setText(studentbatch.getBatch().getCourse().getCourseName());
+        viewHolder.textViewBatchTime.setText(studentbatch.getBatch().getStartTime());
+        viewHolder.textViewCourseTeacher.setText(studentbatch.getWhoAssinged());
+
+        viewHolder.textViewBatchCourseDuration.setText(studentbatch.getBatch().getCourse().getDuration());
+        viewHolder.textViewBatchStartDate.setText(studentbatch.getBatch().getStartDate());
+        viewHolder.textViewBatchEndDate.setText(studentbatch.getBatch().getEndDate());
     }
 
     @Override
     public int getItemCount() {
-        return size;
+        return list.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView textViewBatchCourseName;
         private TextView textViewBatchTime;
+        private TextView textViewCourseTeacher;
+
         private TextView textViewBatchCourseDuration;
         private TextView textViewBatchStartDate;
         private TextView textViewBatchEndDate;
         private ImageView imageViewBatchCourseImage;
         private ImageView imageViewTime;
 
+
         public ViewHolder(View itemView) {
             super(itemView);
 
             textViewBatchCourseName = (TextView)itemView.findViewById(R.id.textViewBatchCourseName);
             textViewBatchTime = (TextView)itemView.findViewById(R.id.textViewBatchTime);
+            textViewCourseTeacher = (TextView)itemView.findViewById(R.id.textViewCourseTeacher);
             textViewBatchCourseDuration = (TextView)itemView.findViewById(R.id.textViewBatchCourseDuration);
             textViewBatchStartDate = (TextView)itemView.findViewById(R.id.textViewBatchStartDate);
             textViewBatchEndDate = (TextView)itemView.findViewById(R.id.textViewBatchEndDate);
