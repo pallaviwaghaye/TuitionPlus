@@ -16,5 +16,4 @@ public class ApiConstants {
     public static final String GET_DETAILS_API = "get-details";
 
 
-
 }

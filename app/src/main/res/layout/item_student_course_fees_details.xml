@@ -2,14 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="fill_parent"
+    android:id="@+id/linearLayout"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="330dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         app:cardBackgroundColor="@color/white"
@@ -23,7 +24,7 @@
             >
 
         <LinearLayout
-            android:layout_width="330dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
@@ -257,20 +258,19 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:background="@android:color/darker_gray"/>
 
             <LinearLayout
+                android:id="@+id/linearLayoutRegistration"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:orientation="vertical">
                 <LinearLayout
-                    android:id="@+id/linearLayoutRegistration"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginTop="10dp"
                     android:orientation="horizontal"
                     >
 
@@ -333,7 +333,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Rs. "
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginLeft="20dp"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
 
@@ -350,7 +350,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Total amount"
-                            android:layout_marginLeft="30dp"
+                            android:layout_marginLeft="20dp"
                             android:textColor="@color/grey"
                             android:textSize="15dp"/>
 
@@ -376,7 +376,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Rs."
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginLeft="20dp"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
 
@@ -392,7 +392,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Paid"
-                            android:layout_marginLeft="30dp"
+                            android:layout_marginLeft="20dp"
                             android:textColor="@color/grey"
                             android:textSize="15dp"/>
 
@@ -417,7 +417,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Rs."
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginLeft="20dp"
                                 android:textColor="@color/black"
                                 android:textSize="15sp" />
 
@@ -433,7 +433,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Balance"
-                            android:layout_marginLeft="30dp"
+                            android:layout_marginLeft="20dp"
                             android:textColor="@color/grey"
                             android:textSize="15dp"/>
 
@@ -463,7 +463,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Paid on : "
-                            android:layout_marginLeft="30dp"
+                            android:layout_marginLeft="20dp"
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
@@ -478,17 +478,18 @@
                     </LinearLayout>
 
                 </LinearLayout>
+            </LinearLayout>
                 <View
+                    android:id="@+id/view1stInstallment"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
                     android:background="@android:color/darker_gray"/>
 
                 <LinearLayout
                     android:id="@+id/linearLayoutFirstInstallmentAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_margin="10dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -552,7 +553,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Rs. "
-                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginLeft="20dp"
                                     android:textColor="@color/black"
                                     android:textSize="15sp" />
 
@@ -569,7 +570,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Total amount"
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
                                 android:textSize="15dp"/>
 
@@ -595,7 +596,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Rs."
-                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginLeft="20dp"
                                     android:textColor="@color/black"
                                     android:textSize="15sp" />
 
@@ -611,7 +612,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Paid"
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
                                 android:textSize="15dp"/>
 
@@ -636,7 +637,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Rs."
-                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginLeft="20dp"
                                     android:textColor="@color/black"
                                     android:textSize="15sp" />
 
@@ -652,7 +653,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Balance"
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
                                 android:textSize="15dp"/>
 
@@ -674,7 +675,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Paid on : "
-                            android:layout_marginLeft="30dp"
+                            android:layout_marginLeft="20dp"
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
@@ -690,15 +691,15 @@
 
                 </LinearLayout>
                 <View
+                    android:id="@+id/view2ndInstallment"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
                     android:background="@android:color/darker_gray"/>
                 <LinearLayout
                     android:id="@+id/linearLayoutSecondInstallment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_margin="10dp"
                     android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -763,7 +764,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Rs. "
-                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginLeft="20dp"
                                     android:textColor="@color/black"
                                     android:textSize="15sp" />
 
@@ -780,7 +781,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Total amount"
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
                                 android:textSize="15dp"/>
 
@@ -806,7 +807,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Rs."
-                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginLeft="20dp"
                                     android:textColor="@color/black"
                                     android:textSize="15sp" />
 
@@ -822,7 +823,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Paid"
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
                                 android:textSize="15dp"/>
 
@@ -846,7 +847,7 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginLeft="20dp"
                                     android:text="Rs."
                                     android:textColor="@color/black"
                                     android:textSize="15sp" />
@@ -863,7 +864,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Balance"
-                                android:layout_marginLeft="30dp"
+                                android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
                                 android:textSize="15dp"/>
 
@@ -885,7 +886,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Paid on : "
-                            android:layout_marginLeft="30dp"
+                            android:layout_marginLeft="20dp"
                             android:textColor="@color/black"
                             android:textSize="15sp" />
 
@@ -899,7 +900,6 @@
                     </LinearLayout>
 
                 </LinearLayout>
-            </LinearLayout>
 
         </LinearLayout>
         </ScrollView>

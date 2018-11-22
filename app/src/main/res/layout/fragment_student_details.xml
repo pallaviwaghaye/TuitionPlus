@@ -84,7 +84,7 @@
                         android:id="@+id/textViewEmailId"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="pallu@gmail.com"
+                        android:text="abc@gmail.com"
                         android:inputType="textEmailAddress"
                         android:layout_marginLeft="45dp"
                         android:textColor="@color/black"
@@ -179,7 +179,7 @@
                         android:id="@+id/textViewStudentAddress"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Gandhi nagar,Nagpur"
+                        android:text="Madhav nagar,Nagpur"
                         android:layout_marginLeft="46dp"
                         android:textColor="@color/black"
                         android:textSize="15dp"/>
@@ -290,6 +290,7 @@
         </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/linearLayoutRecyclerViewCourse"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -298,6 +299,7 @@
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recyclerView2"
                     android:layout_width="match_parent"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content" />
 
 

@@ -171,12 +171,7 @@
                 </LinearLayout>
 
 
-
-
-
-
             </LinearLayout>
-
 
             <Button
                 android:id="@+id/buttonLogin"

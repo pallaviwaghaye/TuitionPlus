@@ -1,16 +1,19 @@
 package com.webakruti.tuitionplus.fragment;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -141,6 +144,7 @@ public class StudentDetailsFragment extends Fragment {
         recyclerViewCourseDetails = (RecyclerView) rootView.findViewById(R.id.recyclerView2);
         LinearLayoutManager layoutManager2 = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
         recyclerViewCourseDetails.setLayoutManager(layoutManager2);
+
 
 
         /*textViewCourseName = (TextView) rootView.findViewById(R.id.textViewCourseName);
@@ -276,13 +280,13 @@ public class StudentDetailsFragment extends Fragment {
 
         if (details.getStudent().getStudentcourses() != null && details.getStudent().getStudentcourses().size() > 0)
         {
-            textViewCourseDetails.setVisibility(View.VISIBLE);
-            viewCourseDetails.setVisibility(View.VISIBLE);
-            recyclerViewCourseDetails.setVisibility(View.VISIBLE);
-            // recyclerview setadapter
+                textViewCourseDetails.setVisibility(View.VISIBLE);
+                viewCourseDetails.setVisibility(View.VISIBLE);
+                recyclerViewCourseDetails.setVisibility(View.VISIBLE);
+                // recyclerview setadapter
 
-            // pass list of StudentBatches
-            recyclerViewCourseDetails.setAdapter(new StudentCourseAdapter(getActivity(), details.getStudent().getStudentcourses()));
+                // pass list of StudentBatches
+                recyclerViewCourseDetails.setAdapter(new StudentCourseAdapter(getActivity(), details.getStudent().getStudentcourses()));
 
             //recyclerView.setAdapter(new StudentDetailsAdapter(getActivity(), 6));
 
@@ -304,6 +308,7 @@ public class StudentDetailsFragment extends Fragment {
         });
 
     }
+
 
 
     public void setNavData(Student student) {
@@ -331,13 +336,21 @@ public class StudentDetailsFragment extends Fragment {
             if (student.getImgurl() != null) {
                 url = student.getImgurl();
             } else {
+                //url = student.getImgurl();
                 url = "https://upload.wikimedia.org/wikipedia/commons/1/14/Deepika_Padukone_December_2015.jpg";
             }
-            Picasso.with(getActivity())
-                    .load(url)
-                    .placeholder(R.drawable.defaultfemaleimg)
-                    .into(StudentDetailsActivity.imageViewProfile);
-
+            if(student.getGender() == "male") {
+                Picasso.with(getActivity())
+                        .load(url)
+                        .placeholder(R.drawable.defaultmaleimg)
+                        .into(StudentDetailsActivity.imageViewProfile);
+            }else
+            {
+                Picasso.with(getActivity())
+                        .load(url)
+                        .placeholder(R.drawable.defaultfemaleimg)
+                        .into(StudentDetailsActivity.imageViewProfile);
+            }
 
         } else {
             StudentDetailsActivity.headerView.setVisibility(View.GONE);
