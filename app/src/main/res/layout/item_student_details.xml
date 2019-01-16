@@ -66,14 +66,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
-                                android:text="BatchTime :" />
+                                android:text="BatchTime :"
+                                android:textColor="@color/grey"/>
 
                             <TextView
                                 android:id="@+id/textViewBatchTime"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
-                                android:text="8:00" />
+                                android:text="8:00"
+                                android:textColor="@color/black"/>
 
 
                         </LinearLayout>
@@ -93,14 +95,14 @@
                                 android:layout_marginTop="5dp"
                                 android:text="abcdcs"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="16dp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="TeacherName"
                                 android:textColor="@color/grey"
-                                android:textSize="15dp" />
+                                android:textSize="13dp" />
 
                         </LinearLayout>
 

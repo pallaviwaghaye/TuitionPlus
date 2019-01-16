@@ -43,15 +43,13 @@
                     android:layout_marginBottom="5dp"
                     android:orientation="vertical"
                     >
-
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Course name"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/black"
-                        android:textSize="15dp"/>
-
+                        android:textSize="14dp"/>
                     <TextView
                         android:id="@+id/textViewCourseName"
                         android:layout_width="match_parent"
@@ -59,7 +57,8 @@
                         android:text="abcdcs"
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/pink"
-                        android:textSize="15sp" />
+                        android:textSize="16dp" />
+
 
 
                 </LinearLayout>
@@ -107,7 +106,7 @@
                             android:text="Course duration"
                             android:layout_marginLeft="10dp"
                             android:textColor="@color/grey"
-                            android:textSize="15dp"/>
+                            android:textSize="14dp"/>
 
                     </LinearLayout>
                     <LinearLayout
@@ -149,7 +148,7 @@
                             android:text="Course fees"
                             android:layout_marginLeft="30dp"
                             android:textColor="@color/grey"
-                            android:textSize="15dp"/>
+                            android:textSize="14dp"/>
 
                     </LinearLayout>
 
@@ -241,7 +240,7 @@
                                 android:text="Rs. "
                                 android:layout_marginLeft="10dp"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="15dp" />
 
                             <TextView
                                 android:id="@+id/textViewTotalFees"
@@ -249,7 +248,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="0"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="15dp" />
 
                         </LinearLayout>
                     </LinearLayout>
@@ -287,7 +286,7 @@
                         android:text="("
                         android:layout_marginLeft="10dp"
                         android:textColor="@color/black"
-                        android:textSize="15sp"
+                        android:textSize="15dp"
                         android:visibility="gone"/>
                     <TextView
                         android:id="@+id/textViewPartiallyPaid"
@@ -302,7 +301,7 @@
                         android:layout_height="wrap_content"
                         android:text=")"
                         android:textColor="@color/black"
-                        android:textSize="15sp"
+                        android:textSize="15dp"
                         android:visibility="gone"/>
 
                 </LinearLayout>
@@ -335,7 +334,7 @@
                                 android:text="Rs. "
                                 android:layout_marginLeft="20dp"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="15dp" />
 
                             <TextView
                                 android:id="@+id/textViewRegistrationTotalAmount"
@@ -343,7 +342,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="0"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="15dp" />
 
                         </LinearLayout>
                         <TextView
@@ -352,7 +351,7 @@
                             android:text="Total amount"
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/grey"
-                            android:textSize="15dp"/>
+                            android:textSize="14dp"/>
 
                     </LinearLayout>
                     <LinearLayout
@@ -378,7 +377,7 @@
                                 android:text="Rs."
                                 android:layout_marginLeft="20dp"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="15dp" />
 
                             <TextView
                                 android:id="@+id/textViewRegistrationPaidFees"
@@ -386,7 +385,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="0"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="15dp" />
                         </LinearLayout>
                         <TextView
                             android:layout_width="wrap_content"
@@ -394,7 +393,7 @@
                             android:text="Paid"
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/grey"
-                            android:textSize="15dp"/>
+                            android:textSize="14dp"/>
 
                     </LinearLayout>
                     <LinearLayout
@@ -419,7 +418,7 @@
                                 android:text="Rs."
                                 android:layout_marginLeft="20dp"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="15dp" />
 
                             <TextView
                                 android:id="@+id/textViewRegistrationRemainingFee"
@@ -427,7 +426,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="0"
                                 android:textColor="@color/black"
-                                android:textSize="15sp" />
+                                android:textSize="15dp" />
                         </LinearLayout>
                         <TextView
                             android:layout_width="wrap_content"
@@ -435,7 +434,7 @@
                             android:text="Balance"
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/grey"
-                            android:textSize="15dp"/>
+                            android:textSize="14dp"/>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -465,7 +464,7 @@
                             android:text="Paid on : "
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/black"
-                            android:textSize="15sp" />
+                            android:textSize="15dp" />
 
                         <TextView
                             android:id="@+id/textViewRegistrationPaidOnDate"
@@ -473,7 +472,7 @@
                             android:layout_height="wrap_content"
                             android:text="16-05-2018"
                             android:textColor="@color/grey"
-                            android:textSize="15sp" />
+                            android:textSize="15dp" />
 
                     </LinearLayout>
 
@@ -501,14 +500,14 @@
                             android:text="1st installment :"
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/pink"
-                            android:textSize="15sp" />
+                            android:textSize="15dp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="("
                             android:layout_marginLeft="10dp"
                             android:textColor="@color/black"
-                            android:textSize="15sp"
+                            android:textSize="15dp"
                             android:visibility="gone"/>
                         <TextView
                             android:id="@+id/textViewUnpaid"
@@ -523,7 +522,7 @@
                             android:layout_height="wrap_content"
                             android:text=")"
                             android:textColor="@color/black"
-                            android:textSize="15sp"
+                            android:textSize="15dp"
                             android:visibility="gone"/>
                     </LinearLayout>
                     <LinearLayout
@@ -555,7 +554,7 @@
                                     android:text="Rs. "
                                     android:layout_marginLeft="20dp"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
 
                                 <TextView
                                     android:id="@+id/textView1stTotalAmount"
@@ -563,7 +562,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="0"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
 
                             </LinearLayout>
                             <TextView
@@ -572,7 +571,7 @@
                                 android:text="Total amount"
                                 android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
-                                android:textSize="15dp"/>
+                                android:textSize="14dp"/>
 
                         </LinearLayout>
                         <LinearLayout
@@ -598,7 +597,7 @@
                                     android:text="Rs."
                                     android:layout_marginLeft="20dp"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
 
                                 <TextView
                                     android:id="@+id/textView1stPaidFees"
@@ -606,7 +605,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="0"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
                             </LinearLayout>
                             <TextView
                                 android:layout_width="wrap_content"
@@ -614,7 +613,7 @@
                                 android:text="Paid"
                                 android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
-                                android:textSize="15dp"/>
+                                android:textSize="14dp"/>
 
                         </LinearLayout>
                         <LinearLayout
@@ -639,7 +638,7 @@
                                     android:text="Rs."
                                     android:layout_marginLeft="20dp"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
 
                                 <TextView
                                     android:id="@+id/textView1stRemainingFee"
@@ -647,7 +646,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="0"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
                             </LinearLayout>
                             <TextView
                                 android:layout_width="wrap_content"
@@ -655,7 +654,7 @@
                                 android:text="Balance"
                                 android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
-                                android:textSize="15dp"/>
+                                android:textSize="14dp"/>
 
                         </LinearLayout>
                     </LinearLayout>
@@ -677,7 +676,7 @@
                             android:text="Paid on : "
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/black"
-                            android:textSize="15sp" />
+                            android:textSize="15dp" />
 
                         <TextView
                             android:id="@+id/textView1stPaidOnDate"
@@ -711,14 +710,14 @@
                             android:text="2nd installment :"
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/pink"
-                            android:textSize="15sp" />
+                            android:textSize="15dp" />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="("
                             android:layout_marginLeft="10dp"
                             android:textColor="@color/black"
-                            android:textSize="15sp"
+                            android:textSize="15dp"
                             android:visibility="gone"/>
                         <TextView
                             android:id="@+id/textView2ndUnpaid"
@@ -733,7 +732,7 @@
                             android:layout_height="wrap_content"
                             android:text=")"
                             android:textColor="@color/black"
-                            android:textSize="15sp"
+                            android:textSize="15dp"
                             android:visibility="gone"/>
                     </LinearLayout>
 
@@ -766,7 +765,7 @@
                                     android:text="Rs. "
                                     android:layout_marginLeft="20dp"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
 
                                 <TextView
                                     android:id="@+id/textView2ndTotalAmount"
@@ -774,7 +773,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="0"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
 
                             </LinearLayout>
                             <TextView
@@ -783,7 +782,7 @@
                                 android:text="Total amount"
                                 android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
-                                android:textSize="15dp"/>
+                                android:textSize="14dp"/>
 
                         </LinearLayout>
                         <LinearLayout
@@ -809,7 +808,7 @@
                                     android:text="Rs."
                                     android:layout_marginLeft="20dp"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
 
                                 <TextView
                                     android:id="@+id/textView2ndPaidFees"
@@ -817,7 +816,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="0"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
                             </LinearLayout>
                             <TextView
                                 android:layout_width="wrap_content"
@@ -825,7 +824,7 @@
                                 android:text="Paid"
                                 android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
-                                android:textSize="15dp"/>
+                                android:textSize="14dp"/>
 
                         </LinearLayout>
                         <LinearLayout
@@ -850,7 +849,7 @@
                                     android:layout_marginLeft="20dp"
                                     android:text="Rs."
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
 
                                 <TextView
                                     android:id="@+id/textView2ndRemainingFee"
@@ -858,7 +857,7 @@
                                     android:layout_height="wrap_content"
                                     android:text="0"
                                     android:textColor="@color/black"
-                                    android:textSize="15sp" />
+                                    android:textSize="15dp" />
                             </LinearLayout>
                             <TextView
                                 android:layout_width="wrap_content"
@@ -866,7 +865,7 @@
                                 android:text="Balance"
                                 android:layout_marginLeft="20dp"
                                 android:textColor="@color/grey"
-                                android:textSize="15dp"/>
+                                android:textSize="14dp"/>
 
                         </LinearLayout>
                     </LinearLayout>
@@ -888,7 +887,7 @@
                             android:text="Paid on : "
                             android:layout_marginLeft="20dp"
                             android:textColor="@color/black"
-                            android:textSize="15sp" />
+                            android:textSize="15dp" />
 
                         <TextView
                             android:id="@+id/textView2ndPaidOnDate"
@@ -896,7 +895,7 @@
                             android:layout_height="wrap_content"
                             android:text="N/A"
                             android:textColor="@color/grey"
-                            android:textSize="15sp" />
+                            android:textSize="15dp" />
                     </LinearLayout>
 
                 </LinearLayout>

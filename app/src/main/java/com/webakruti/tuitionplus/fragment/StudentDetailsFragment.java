@@ -60,6 +60,9 @@ public class StudentDetailsFragment extends Fragment {
     //course details
     private  RecyclerView recyclerViewCourseDetails;
 
+    private LinearLayout linearLayoutBatchDetails;
+    private LinearLayout linearLayoutCourseDetails;
+
   /*  //course details
     private TextView textViewCourseName;
     private TextView textViewCourseDuration;
@@ -146,6 +149,9 @@ public class StudentDetailsFragment extends Fragment {
         recyclerViewCourseDetails.setLayoutManager(layoutManager2);
 
 
+        linearLayoutBatchDetails = (LinearLayout)rootView.findViewById(R.id.linearLayoutBatchDetails);
+        linearLayoutCourseDetails = (LinearLayout)rootView.findViewById(R.id.linearLayoutCourseDetails);
+
 
         /*textViewCourseName = (TextView) rootView.findViewById(R.id.textViewCourseName);
         textViewCourseDuration = (TextView) rootView.findViewById(R.id.textViewCourseDuration);
@@ -227,8 +233,14 @@ public class StudentDetailsFragment extends Fragment {
     private void setUIData(final Details details) {
         textViewEmailId.setText(details.getStudent().getEmail());
         textViewPhoneNumber.setText(details.getStudent().getMobile());
-        textViewStudentAddress.setText(details.getStudent().getAddress() + ", " + details.getStudent().getCity() + ", " +
-                details.getStudent().getState() + ", " + details.getStudent().getCountry() + ", " + details.getStudent().getPincode());
+        if(details.getStudent().getAddress() != null) {
+            textViewStudentAddress.setText(details.getStudent().getAddress() + ", " + details.getStudent().getCity() + ", " +
+                    details.getStudent().getState() + ", " + details.getStudent().getCountry() + ", " + details.getStudent().getPincode());
+        }else{
+            textViewStudentAddress.setText("N/A");
+        }
+
+        //details.getStudent().getDateAdminssion();
 
        /* textViewCourseName.setText(details.getStudent().getStudentcourses().get(0).getCourse().getCourseName());
         textViewCourseDuration.setText(details.getStudent().getStudentcourses().get(0).getCourse().getDuration());
@@ -263,6 +275,7 @@ public class StudentDetailsFragment extends Fragment {
         {
             textViewBatchDetails.setVisibility(View.VISIBLE);
             viewBatchDetailsTop.setVisibility(View.VISIBLE);
+            linearLayoutBatchDetails.setVisibility(View.VISIBLE);
             recyclerView.setVisibility(View.VISIBLE);
             // recyclerview setadapter
 
@@ -274,6 +287,7 @@ public class StudentDetailsFragment extends Fragment {
         } else {
             textViewBatchDetails.setVisibility(View.GONE);
             viewBatchDetailsTop.setVisibility(View.GONE);
+            linearLayoutBatchDetails.setVisibility(View.GONE);
             recyclerView.setVisibility(View.GONE);
         }
 
@@ -282,6 +296,7 @@ public class StudentDetailsFragment extends Fragment {
         {
                 textViewCourseDetails.setVisibility(View.VISIBLE);
                 viewCourseDetails.setVisibility(View.VISIBLE);
+                linearLayoutCourseDetails.setVisibility(View.VISIBLE);
                 recyclerViewCourseDetails.setVisibility(View.VISIBLE);
                 // recyclerview setadapter
 
@@ -293,6 +308,7 @@ public class StudentDetailsFragment extends Fragment {
         } else {
             textViewCourseDetails.setVisibility(View.GONE);
             viewCourseDetails.setVisibility(View.GONE);
+            linearLayoutCourseDetails.setVisibility(View.GONE);
             recyclerViewCourseDetails.setVisibility(View.GONE);
         }
 

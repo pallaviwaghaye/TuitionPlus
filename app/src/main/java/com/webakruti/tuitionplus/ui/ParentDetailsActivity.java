@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,9 @@ public class ParentDetailsActivity extends AppCompatActivity {
 
     private ImageView imageViewBack;
 
+    private TextView textViewParentDetails;
+    private LinearLayout linearLayoutParentDetails;
+
     private ProgressDialog progressDialogForAPI;
 
 
@@ -47,6 +51,9 @@ public class ParentDetailsActivity extends AppCompatActivity {
         textViewMobileNumber = (TextView) findViewById(R.id.textViewMobileNumber);
         textViewAlternateMobNo = (TextView) findViewById(R.id.textViewAlternateMobNo);
         textViewParentAddress = (TextView) findViewById(R.id.textViewParentAddress);
+
+        linearLayoutParentDetails = (LinearLayout)findViewById(R.id.linearLayoutParentDetails);
+        textViewParentDetails = (TextView)findViewById(R.id.textViewParentDetails);
 
         imageViewBack = (ImageView) findViewById(R.id.imageViewBack);
         imageViewBack.setOnClickListener(new View.OnClickListener() {
@@ -67,9 +74,16 @@ public class ParentDetailsActivity extends AppCompatActivity {
 
             if (parentDetails != null) {
 
+                linearLayoutParentDetails.setVisibility(View.VISIBLE);
+                textViewParentDetails.setVisibility(View.GONE);
+
                 progressDialogForAPI.cancel();
 
-                textViewParentName.setText(parentDetails.getFname() + " " + parentDetails.getLname());
+                if(parentDetails.getFname()!=null && parentDetails.getLname()!=null) {
+                    textViewParentName.setText(parentDetails.getFname() + " " + parentDetails.getLname());
+                }else{
+                    textViewParentName.setText("N/A");
+                }
                 textViewStudentRelation.setText(parentDetails.getRelation());
                 if (parentDetails.getEmail() != null) {
                     textViewEmail.setText(parentDetails.getEmail().toString());
@@ -85,8 +99,19 @@ public class ParentDetailsActivity extends AppCompatActivity {
                     textViewAlternateMobNo.setText("N/A");
                 }
 
-                textViewParentAddress.setText(parentDetails.getAddress() + ", " + parentDetails.getCity() + ", " +
-                        parentDetails.getState() + ", " + parentDetails.getCountry() + ", " + parentDetails.getPincode());
+                if (parentDetails.getAddress() != null) {
+                    textViewParentAddress.setText(parentDetails.getAddress() + ", " + parentDetails.getCity() + ", " +
+                            parentDetails.getState() + ", " + parentDetails.getCountry() + ", " + parentDetails.getPincode());
+
+                }else{
+                    textViewParentAddress.setText("N/A");
+                }
+            }
+            else{
+                progressDialogForAPI.cancel();
+                linearLayoutParentDetails.setVisibility(View.GONE);
+                textViewParentDetails.setVisibility(View.VISIBLE);
+                textViewParentDetails.setText("No data found");
             }
 
         } else {

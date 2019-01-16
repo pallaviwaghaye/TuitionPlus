@@ -64,13 +64,25 @@
         android:scrollbars="none"
         >
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
         >
+        <TextView
+            android:id="@+id/textViewParentDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:visibility="gone"
+            android:text="No data found"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            />
 
     <LinearLayout
+        android:id="@+id/linearLayoutParentDetails"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -358,6 +370,6 @@
 
         </LinearLayout>
     </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
     </ScrollView>
 </RelativeLayout>
